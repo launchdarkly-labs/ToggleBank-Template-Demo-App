@@ -133,46 +133,6 @@
   src: url("/fonts/Audimat3000-Regulier.otf");
 }
 
-@font-face {
-  font-family: "Sohne Light";
-  src: url("/fonts/sohne-light.otf");
-}
-
-.herotext {
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-color: #9eadf1;
-  background-image: linear-gradient(90deg, #edf4c9, #9eadf1);
-}
-
-.marketplace {
-  background: var(--gradients-gradient-yg, linear-gradient(225deg, #ebff38 -7.08%, #3dd6f5 90.68%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.card1image {
-  /* transform: rotate(12.22deg); */
-  flex-shrink: 0;
-}
-
-.card2shadow {
-  box-shadow: 7px 4px 31px 0px rgba(0, 0, 0, 0.35);
-}
-
-.shoptext {
-  color: #d1d3d4;
-
-  font-family: Sohne;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 31.2px */
-}
-
 .aiinsightstext {
   color: #58595b;
   font-family: Sohne;
@@ -190,15 +150,6 @@
   line-height: normal;
 }
 
-.accountsecondary {
-  color: var(--gray-700, #58595b);
-  font-family: Sohne;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 200;
-  line-height: normal;
-}
-
 .moneytext {
   color: #00b969;
   font-family: Sohne;
@@ -208,44 +159,13 @@
   line-height: normal;
 }
 
-.summary-border::after {
-  content: "";
-  display: block;
-  height: 2px;
-  background: blue;
-  width: 100%;
-}
-
-.responsive-div {
-  /* default styles */
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.button-bank {
-  background-color: #007bff;
-}
-
-.button-airlines {
-  background: linear-gradient(to right, #a855f7, #d946ef);
-}
-
-.button-market {
-  display: grid;
-  place-items: center;
-  background: linear-gradient(to right, #3b82f6, #10b981);
-  color: black;
-}
-
-@layer utilities {
-  .marketplace-item-banner-cutout {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 90%, 0 100%);
-  }
-}
-
-.markdown > * {
-  all: revert;
+.balance {
+  color: #282828;
+  font-family: Sohne;
+  font-size: 26.936px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 /* PrismJS 1.29.0
@@ -341,10 +261,4 @@ pre[class*="language-"] {
 .token.bold,
 .token.important {
   font-weight: 700;
-}
-.token.italic {
-  font-style: italic;
-}
-.token.entity {
-  cursor: help;
 }

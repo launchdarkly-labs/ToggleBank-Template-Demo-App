@@ -1,6 +1,4 @@
 import "@/styles/globals.css";
-import "@/styles/bank.css";
-import "@/styles/home.css";
 import type { AppProps } from "next/app";
 import NoSSRWrapper from "@/components/no-ssr";
 import dynamic from "next/dynamic";

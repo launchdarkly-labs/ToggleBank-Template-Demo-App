@@ -3,7 +3,6 @@ import Bank from "./bank";
 import Head from "next/head";
 
 export default function Home() {
-
   return (
     <>
       {/* <!-- Google tag (gtag.js) --> */}
