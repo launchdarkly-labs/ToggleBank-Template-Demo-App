@@ -12,8 +12,7 @@ import { BatteryCharging } from "lucide-react";
 import { PERSONA_ROLE_DEVELOPER, COHERE, ANTHROPIC, DEFAULT_AI_MODEL } from "@/utils/constants";
 import LiveLogsContext from "@/utils/contexts/LiveLogsContext";
 import { useIsMobile } from "../hooks/use-mobile";
-import { useIsTablet } from "../hooks/use-tablet";
-import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetClose } from "@/components/ui/sheet";
 
 type ApiResponse = {
     response: string;
@@ -347,7 +346,6 @@ function ChatBotInterface({
 
 export default function Chatbot() {
     const isMobile = useIsMobile();
-    const isTablet = useIsTablet();
     const [isOpen, setIsOpen] = useState(false);
     const [openMobile, setOpenMobile] = useState(false);
     const cardRef = useRef<HTMLDivElement>(null);

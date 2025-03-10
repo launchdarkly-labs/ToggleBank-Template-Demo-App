@@ -36,7 +36,7 @@ export default function BankHomePage() {
 
   return (
     <motion.main
-      className={`relative min-w-screen min-h-screen overflow-hidden`}
+      className={`relative min-w-screen min-h-screen overflow-hidden px-4 xl:px-0`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -88,7 +88,7 @@ export default function BankHomePage() {
                 </>
               )}
 
-              <NavbarLogin variant={BANK} />
+              <NavbarLogin />
             </>
           </NavbarRightSideWrapper>
         </>
@@ -117,15 +117,15 @@ export default function BankHomePage() {
           }}
         />
 
-        <section className="w-full max-w-7xl py-14 sm:py-[8rem] px-4 xl:px-0 xl:mx-auto flex flex-col sm:flex-row justify-between items-center">
+        <section className="w-full max-w-7xl py-14 sm:py-[8rem] xl:mx-auto flex flex-col sm:flex-row justify-between items-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 sm:flex flex-row sm:flex-col text-white w-full sm:w-1/2 justify-start mb-4 pr-0 sm:pr-10 sm:mb-0 gap-y-10 z-10">
-            <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-audimat col-span-1 sm:col-span-0 w-full bg-bank-gradient-text-color bg-clip-text text-transparent px-2 sm:px-6 md:px-8 lg:px-10 xl:px-8">
+            <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-audimat col-span-1 sm:col-span-0 w-full bg-bank-gradient-text-color bg-clip-text text-transparent pr-2 sm:pr-6 md:pr-8 lg:pr-10 xl:pr-8">
               Spend smart with Toggle Bank
             </h1>
-            <p className="text-lg sm:text-md md:text-xl lg:text-xl col-span-2 sm:col-span-0 font-sohnelight w-full text-black px-6 sm:px-6 md:px-8 lg:px-10 xl:px-8 ">
+            <p className="text-lg sm:text-md md:text-xl lg:text-xl col-span-2 sm:col-span-0 font-sohnelight w-full text-black pr-6 sm:pr-6 md:pr-8 lg:pr-10 xl:pr-8 ">
               {bankHomePageValues?.industryMessages}
             </p>
-            <div className="flex space-x-4 px-6 sm:px-2 md:px-4 lg:px-6 xl:px-8">
+            <div className="flex space-x-4 pr-6 sm:pr-2 md:pr-4 lg:pr-6 xl:pr-8">
               <Button className="shadow-2xl bg-bank-gradient-blue-background hover:bg-bank-gradient-text-color hover:text-white text-white rounded-3xl font-sohnelight w-28 h-10 sm:w-32 sm:h-11 md:w-36 md:h-12 lg:w-40 lg:h-14 xl:w-36 xl:h-12 text-xs sm:text-md md:text-lg lg:text-xl xl:text-xl">
                 Join Now
               </Button>
@@ -146,7 +146,7 @@ export default function BankHomePage() {
         <section
           className="w-full sm:w-3/4 grid grid-cols-2 sm:flex sm:flex-row font-sohnelight text-center justify-center mx-auto gap-y-8 
             sm:gap-y-0 gap-x-8
-          sm:gap-x-12 lg:gap-x-24 py-8 px-4 sm:px-0"
+          sm:gap-x-12 lg:gap-x-24 py-8"
         >
           {bankHomePageValues?.bankingServicesArr.map((ele: any, i: number) => {
             return (
@@ -174,7 +174,7 @@ export default function BankHomePage() {
           })}
         </section>
       </section>
-      <section className="w-full sm:w-3/4 mx-auto my-10 max-w-7xl flex flex-col gap-y-10 px-4 sm:px-0">
+      <section className="w-full sm:w-3/4 mx-auto my-10 max-w-7xl flex flex-col gap-y-10">
         <AdContentRowWrapper
           leftChild={
             <div className="bg-bank-gradient-blue-background p-4 rounded-2xl h-full">

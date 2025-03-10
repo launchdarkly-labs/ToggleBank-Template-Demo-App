@@ -24,9 +24,7 @@ import NavbarDropdownMenu from "@/components/ui/NavComponent/NavbarDropdownMenu"
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { CSNav } from "@/components/ui/csnav";
 
-import {
-    NavbarSignUpButton,
-} from "@/components/ui/NavComponent/NavbarSignUpInButton";
+import { NavbarSignUpButton } from "@/components/ui/NavComponent/NavbarSignUpInButton";
 import { NAV_ELEMENTS_VARIANT } from "@/utils/constants";
 
 export default function BankUserDashboard() {
@@ -36,7 +34,8 @@ export default function BankUserDashboard() {
     const { wealthManagement, federatedAccounts } = useFlags();
     const money = JSON.stringify(oldCheckingData);
     const prompt: string = `Playing the role of a financial analyst, using the data contained within this information set: ${money}, write me 50 word of an analysis of the data and highlight the item I spend most on. Skip any unnecessary explanations. Summarize the mostly costly area im spending at. Your response should be tuned to talking directly to the requestor.`;
-    const viewPrompt: string = 'Playing the role of a financial analyst, write me 50 word of an analysis of the data and highlight the item I spend most on. Skip any unnecessary explanations. Summarize the mostly costly area im spending at. Your response should be personalized for the user requesting the information.'
+    const viewPrompt: string =
+        "Playing the role of a financial analyst, write me 50 word of an analysis of the data and highlight the item I spend most on. Skip any unnecessary explanations. Summarize the mostly costly area im spending at. Your response should be personalized for the user requesting the information.";
 
     async function submitQuery(query: any) {
         try {
@@ -80,8 +79,9 @@ export default function BankUserDashboard() {
                 style={{
                     maxWidth: "100%",
                     width: "auto",
-                    height: "auto"
-                }} />
+                    height: "auto",
+                }}
+            />
             <Image
                 src={bankDashboardBackgroundLeft}
                 className="fixed left-0 bottom-0 m-h-screen"
@@ -90,8 +90,9 @@ export default function BankUserDashboard() {
                 style={{
                     maxWidth: "100%",
                     width: "auto",
-                    height: "auto"
-                }} />
+                    height: "auto",
+                }}
+            />
             <main className="w-full px-4 xl:px-0 mx-auto max-w-7xl relative ">
                 <NavWrapper>
                     <>
@@ -143,26 +144,28 @@ export default function BankUserDashboard() {
                                     </>
                                 )}
 
-                                <NavbarLogin variant={BANK} />
+                                <NavbarLogin />
                             </>
                         </NavbarRightSideWrapper>
                     </>
                 </NavWrapper>
                 <section
-                    className={`flex flex-col xl:flex-row py-8 ${federatedAccounts ? "gap-y-8 sm:gap-x-8" : ""
-                        }`}
+                    className={`flex flex-col xl:flex-row py-8 ${
+                        federatedAccounts ? "gap-y-8 sm:gap-x-8" : ""
+                    }`}
                 >
                     <section
-                        className={`w-full h-full ${federatedAccounts ? "xl:w-[60%]" : "xl:w-full"
-                            } font-sohne  `}
+                        className={`w-full h-full ${
+                            federatedAccounts ? "xl:w-[60%]" : "xl:w-full"
+                        } font-sohne  `}
                     >
-                        <div className="p-6 w-full rounded-xl">
+                        <div className=" w-full rounded-xl">
                             <div className="justify-center xl:justify-start">
-                                <p className="text-blue-600 font-sohne mb-6 text-[24px]">
+                                <h1 className="text-blue-600 font-sohne text-[24px] mb-6 sm:ml-6">
                                     Account Summary
-                                </p>
+                                </h1>
 
-                                <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-x-4">
+                                <div className="flex flex-col sm:flex-row gap-y-8 sm:gap-x-4">
                                     <motion.div
                                         className="p-4 h-[300px] w-full sm:w-1/3 bg-white shadow-xl rounded-2xl cursor-pointer"
                                         whileHover={{ scale: 1.1 }}
@@ -186,19 +189,12 @@ export default function BankUserDashboard() {
                         </div>
                     </section>
 
-                    {federatedAccounts ?
-                        <FederatedAccountModule /> : null}
+                    {federatedAccounts ? <FederatedAccountModule /> : null}
                 </section>
 
-                <p className="text-blue-600 font-sohne mb-6 ml-6 text-[24px]">
-                    Wealth Management
-                </p>
+                <p className="text-blue-600 font-sohne mb-6 sm:ml-6 text-[24px]">Wealth Management</p>
                 <section className="flex flex-col xl:flex-row w-full gap-y-8 sm:gap-x-8 mb-10 h-full">
-
-                    <div
-                        className={`w-full  ${wealthManagement ? "xl:w-[60%]" : "sm:w-full"
-                            }`}
-                    >
+                    <div className={`w-full  ${wealthManagement ? "xl:w-[60%]" : "sm:w-full"}`}>
                         <AccountTrends data={data} />
                     </div>
 
@@ -218,10 +214,16 @@ export default function BankUserDashboard() {
 
                 <div className="flex flex-col lg:flex-row w-full h-full gap-y-8 sm:gap-x-8 justify-between">
                     <div className="w-full lg:w-1/2">
-                        <img src="banking/SpecialOffer-CC.svg" className="shadow-xl rounded-xl w-full" />
+                        <img
+                            src="banking/SpecialOffer-CC.svg"
+                            className="shadow-xl rounded-xl w-full"
+                        />
                     </div>
                     <div className="w-full lg:w-1/2 flex justify-end ">
-                        <img src="banking/SpecialOffer-CarLoan.svg" className="shadow-xl rounded-xl w-full" />
+                        <img
+                            src="banking/SpecialOffer-CarLoan.svg"
+                            className="shadow-xl rounded-xl w-full"
+                        />
                     </div>
                 </div>
             </main>
